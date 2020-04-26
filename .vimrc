@@ -8,11 +8,14 @@ set shiftwidth=2
 set tabstop=2
 set smarttab
 set autoindent
+set hlsearch
+set incsearch
 au BufRead,BufNewFile *.fab setfiletype python
 au BufRead,BufNewFile *.py.erb set ft=python
 
 set rnu
 
+set mouse=r
 
 filetype off                   " required!
 
@@ -54,6 +57,8 @@ map <leader>rt :!ctags --extra=+f -R *<CR><CR>
 map <leader>tt :TlistToggle<CR>
 
 Bundle 'scrooloose/syntastic'
+
+Bundle 'jnwhiteh/vim-golang'
 
 "Bundle 'tpope/vim-fugitive'
 "Bundle 'Lokaltog/vim-easymotion'
